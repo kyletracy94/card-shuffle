@@ -1,6 +1,7 @@
 package card.shuffle.classes;
 
 /**
+ * Contains all possible ranks of cards.
  * 
  * @author kyle
  *

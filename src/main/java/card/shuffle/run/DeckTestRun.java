@@ -1,11 +1,14 @@
 package card.shuffle.run;
 
-import java.util.Iterator;
-import java.util.Map;
 
 import card.shuffle.classes.Card;
 import card.shuffle.classes.Deck;
 
+/**
+ * 
+ * @author kyle
+ *
+ */
 public class DeckTestRun {
 	public static void main(String args[]) {
 		
@@ -13,23 +16,40 @@ public class DeckTestRun {
 		Deck deck = new Deck();
 		
 		// check every card in deck
-/*		for(Card card : deck.cards) {
+		for(Card card : deck.getCards()) {
+			System.out.print(card.rank + " ");
+			System.out.println(card.suit);
+		}
+
+		// shuffle deck
+		
+		// deal card
+/*		for(int i = 0; i < 10; i++) {
+			System.out.println("testing dealing cards ==================");
+			Card card = deck.deal_one_card();
+			System.out.print(card.rank + " ");
+			System.out.println(card.suit);
+		}
+		
+		System.out.println("Now print every card in deck");
+		System.out.println(deck.cards.size());
+		
+		// check every card in deck
+		for(Card card : deck.cards) {
 			System.out.print(card.rank + " ");
 			System.out.println(card.suit);
 		}*/
 		
-		for(Integer key : deck.cardMap.keySet()) {
-			System.out.print(key + ": ");
+		deck.shuffle();
+		
+		System.out.println("testing shuffle");
+		
+		// check every card in deck
+		for(Card card : deck.getCards()) {
+			System.out.print(card.rank + " ");
+			System.out.println(card.suit);
 		}
 		
-		for(Card value : deck.cardMap.values()) {
-			System.out.println(value.rank + " ");
-			System.out.println(value.suit);
-		}
-		
-		// shuffle deck
-		
-		// deal card
 		
 		// check deck count
 		
