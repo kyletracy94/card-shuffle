@@ -60,7 +60,7 @@ public class Deck implements CardOperations {
 		
 		// the higher the count the more shuffled the deck
 		Integer shuffleCount = Integer.valueOf(prop.getProperty("shuffle.count"));
-		System.out.println("Shuffle count is:       " + shuffleCount);
+
 		// seed random
 		Random rand = new Random();
 		

@@ -109,4 +109,24 @@ public class CardTest {
         
         
     }
+    
+    @Test
+    public void testDeckFullDeal() {
+    	
+    	Deck deck = new Deck();
+    	for(int i = 0; i < deck.getCards().size(); i++) {
+    		deck.deal_one_card();
+    	}
+    	
+    	while(deck.getCards().size() > 0) {
+    		deck.deal_one_card();
+    	}
+    	
+    	
+    	
+    	Card card = deck.deal_one_card();
+    	
+    	assertTrue("Card should be null", card == null);
+    	
+    }
 }
